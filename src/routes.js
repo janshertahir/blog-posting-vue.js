@@ -36,14 +36,27 @@ const routes = [
         name:'MyBlogs',
         path:'/my-blogs',
         component: MyBlogs,
-        beforeEnter: (to, from) => {
-            return localStorage.getItem("status") == 'true';
+        beforeEnter: (to, from, next) => {
+            if(localStorage.getItem("status") == 'false'){
+                next({ name: 'Login' });
+            }
+            else{
+                next();
+            }
         },
     },
     {
         name:'AddBlog',
         path:'/add-blog',
         component: AddBlog,
+        beforeEnter: (to, from, next) => {
+            if(localStorage.getItem("status") == 'false'){
+                next({ name: 'Login' });
+            }
+            else{
+                next();
+            }
+        },
     },
     {
         name:'UpdateBlog',

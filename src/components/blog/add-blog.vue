@@ -70,14 +70,6 @@ export default {
         };
     },
 
-    beforeCreate(){
-        if (localStorage.getItem("status") == 'false') {
-            this.$router.push({
-                name: 'Login'
-            });
-        }
-    },
-
     created() {
         if(this.$route.params.id){
             this.patchForm();

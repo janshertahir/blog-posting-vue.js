@@ -53,11 +53,10 @@ export default {
     },
 
     mounted() {
-
         this.subDescription = this.data.description.substring(0, 50);
         this.subTitle = this.data.title.substring(0, 40);
-
     },
+    
     created(){
         this.date=this.data.date.split('T');
     },
