@@ -649,7 +649,8 @@ ul.blog-list .slick-list.draggable {
 }
 
 .cs-blog-detail .cs-main-post img {
-    width: 100%;
+    min-width: 60%;
+    max-height: 35rem;
 }
 
 .cs-blog-detail .cs-main-post {
